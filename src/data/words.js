@@ -1,4 +1,4 @@
-export const words = {
+export const wordsPt = {
     rosto: ['rosto', 'boca', 'olho', 'nariz', 'bochecha'],
     frutas: ['banana', 'maçã', 'laranja', 'uva', 'morango'],
     corpo: ['corpo', 'braço', 'perna', 'mão', 'cabeça'],
@@ -6,3 +6,5 @@ export const words = {
     programacao: ['programacao', 'codigo', 'algoritmo', 'função', 'variável'],
     comida: ['comida', 'arroz', 'feijão', 'carne', 'peixe']
   };
+ export default wordsPt;
+  
