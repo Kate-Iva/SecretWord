@@ -27,6 +27,8 @@ const Game = ({ verifyLetter }) => {
         <span>a, </span>
         <span>b, </span>
     </div>
+
+    <button onClick={verifyLetter}>Finalisar o jogo</button>
     </div>
     
 );
