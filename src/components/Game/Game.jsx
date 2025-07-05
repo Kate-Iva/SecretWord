@@ -1,16 +1,24 @@
 import styles from "./Game.module.css"
 
-const Game = ({ verifyLetter }) => {
+const Game = ({ verifyLetter, pickedWord, pickedCategory, letters, guessedLetters, wrongLetters, guesses, score }) => {
     return (
     <div className={styles.game} >
     <p className={styles.points}>
-     <span>Pontuação: 000 </span>
+     <span>Pontuação: {score} </span>
     </p>
     <h1>Advinhe a palavra:</h1>
     <h3 className={styles.tip}>
-        Dica soobre a palavra: <span>Dica...</span>
+        Dica soobre a palavra: <span>{pickedCategory}</span>
     </h3>
+    <p>Você ainda tem {guesses} tentativas</p>
     <div className={styles.wordContainer}>
+        {letters.map((letter, i) => (
+            guessedLetters.includes(letter) ? (
+                <span key={i} className={styles.letter}>{letter}</span>
+            ) : (
+                <span key={i} className={styles.blankSquare}></span>
+            )
+        ))}
         <span className={styles.letter}>A</span>
         <span className={styles.blankSquare}></span>
     </div>
@@ -24,8 +32,9 @@ const Game = ({ verifyLetter }) => {
 
     <div className={styles.wrongLettersContainer}>
         <p>Letras já utilizadas: </p>
-        <span>a, </span>
-        <span>b, </span>
+        {wrongLetters.map((letter, i) => (
+            <span key={i}> {letter} </span>
+        ))}
     </div>
 
     <button onClick={verifyLetter}>Finalisar o jogo</button>
