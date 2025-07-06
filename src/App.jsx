@@ -65,8 +65,9 @@ setLetters(wordLetters);
  };
 
 // process the letter input
-const verifyLetter = () => {
+const verifyLetter = (letter) => {
   setGameStage(stages[2].name);
+  console.log(letter);
 };
 
 // restarts the game
