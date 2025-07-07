@@ -28,7 +28,7 @@ const [letters, setLetters] = useState([]);
 const [guessedLetters, setGuessedLetters] = useState([]);
 const [wrongLetters, setWrongLetters] = useState([]);
 const [guesses, setGuesses] = useState(guessesQty);
-const [score, setScore] = useState(0);
+const [score, setScore] = useState(50);
 
 const pickWordandCategory = () => {
   //pick a random category
@@ -129,7 +129,7 @@ const retry = () => {
       wrongLetters={wrongLetters}
       guesses={guesses}
       score={score} />}
-      {gameStage === "end" && <GameOver retry={retry} />}
+      {gameStage === "end" && <GameOver retry={retry} score={score}/>}
     </div>
     </>
   )
