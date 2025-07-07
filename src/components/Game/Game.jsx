@@ -36,8 +36,7 @@ const Game = ({
                 <span key={i} className={styles.blankSquare}></span>
             )
         ))}
-        <span className={styles.letter}>A</span>
-        <span className={styles.blankSquare}></span>
+
     </div>
     <div className={styles.letterContainer}>
          <p>Tente advinhar uma letra da palavra:</p>
@@ -59,8 +58,8 @@ const Game = ({
             <span key={i}> {letter} </span>
         ))}
     </div>
-
-    <button onClick={verifyLetter}>Finalisar o jogo</button>
+{/** 
+    <button onClick={verifyLetter}>Finalisar o jogo</button>*/}
     </div>
     
 );
