@@ -4,6 +4,7 @@ import './App.css'
 import { useCallback, useEffect, useState } from 'react'
 //Data
 import { wordsPt } from "./data/words.js"
+//import { wordsEn } from "./data/wordsEn.js"
 //Components
 import StartScreen from "./components/StartScreen/StartScreen.jsx"
 import Game from "./components/Game/Game.jsx"
@@ -20,6 +21,7 @@ const guessesQty = 3;
 function App() {
  const [gameStage, setGameStage] = useState(stages[0].name);
  const [words] = useState(wordsPt);
+ //const [wordsEn] = useState(wordsEn);
 
  const [pickedWord, setPickedWord] = useState("");
 const [pickedCategory, setPickedCategory] = useState("");
@@ -38,6 +40,7 @@ const category = categories[Math.floor(Math.random() * Object.keys(categories).l
 
 //pick a random word
 const word = words[category][Math.floor(Math.random() * words[category].length)];
+//const wordEn = words[category][Math.floor(Math.random() * words[category].length)];
 
 return {word, category};
 }, [words]);
